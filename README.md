@@ -1,105 +1,111 @@
-EduMentor (StudyMode Tutor)
+Study Mode Tutor
 
-EduMentor is an AI-powered tutoring application designed to provide personalized study support. Students can ask questions, get assignments, or take quizzes through an interactive chat-based interface. It combines modern frontend technologies with AI integration for a seamless learning experience.
+This project contains everything you need to run your AI-powered study assistant locally. It provides interactive tutoring features like chat, quizzes, PDF uploads, and assignment support — powered by the Gemini API.
 
- Features
+Features
 
-🤖 AI-Powered Socratic Tutor – guides students step by step.
+🤖 AI Tutor – Ask questions and get instant answers
 
-📚 Quiz Me & Assignments – interactive learning modes.
+📄 PDF Uploads – Summarize and explain study materials
 
-📂 File Upload Support – attach PDF, DOCX, TXT, or images for instant help.
+🧩 Interactive Quizzes – Auto-generate practice questions
 
-🎨 Modern UI/UX – clean interface with light & dark mode.
+📝 Assignment Helper – Guided support for homework tasks
 
-⚡ Fast & Lightweight – built with React + Vite + TypeScript.
+Custom Themes – Light/Dark mode toggle
 
-🔑 Secure API Integration with environment-based configuration.
+🔧 Prerequisites
 
- Tech Stack
+Make sure you have installed:
 
-Frontend: React (TypeScript), Vite
+Node.js (v16 or later)
 
-Styling: Tailwind CSS / custom components
+npm or yarn
 
-State Management: React Hooks
+Gemini API Key → get one from Google AI
 
-Backend / API: Gemini AI API
+Installation
 
-Build & Config: Vite, tsconfig, dotenv
+Clone the repository and install dependencies:
 
- Project Structure
-studymodetutor/
-├── App.tsx              # Main App component
-├── components/          # UI components
-├── services/            # API & utility services
-├── hooks/               # Custom React hooks
-├── types.ts             # TypeScript types
-├── constants.ts         # Constants
-├── index.tsx            # App entry point
-├── index.html           # HTML template
-├── vite.config.ts       # Vite config
-├── tsconfig.json        # TypeScript config
-└── README.md            # Documentation
-
- Setup & Installation
-Prerequisites
-
-Node.js
- (v16 or later)
-
-Gemini API Key (Get it from Google AI Studio
-)
-
-Run Locally
-
-Clone the repository
-
-git clone <your-repo-url>
-cd studymodetutor
-
-
-Install dependencies
-
+git clone https://github.com/your-username/study-mode-tutor.git
+cd study-mode-tutor
 npm install
 
 
-Create .env.local and add your API key:
+Create a .env.local file in the project root and add your Gemini API key:
 
-GEMINI_API_KEY=your_api_key_here
+GEMINI_API_KEY=your_gemini_api_key_here
 
+▶Run Locally
 
-Start development server
+Start the development server:
 
 npm run dev
 
- Deployment
 
-Build for production:
+Then open the app in your browser at:
+👉 http://localhost:
 
-npm run build
+Project Structure
+study-mode-tutor/
+│── App.tsx               # Main application entry
+│── index.tsx             # React bootstrap
+│── components/           # UI components
+│   ├── Sidebar.tsx
+│   ├── ChatView.tsx
+│   ├── PdfUpload.tsx
+│   ├── QuizView.tsx
+│   └── assignment/
+│       └── AssignmentView.tsx
+│── services/             # API integration
+│   └── geminiService.ts
+│── hooks/                # Custom hooks
+│   └── useTheme.ts
+│── package.json          # Dependencies & scripts
+│── tsconfig.json         # TypeScript config
+│── vite.config.ts        # Build config
+│── .env.local            # Environment variables
 
+Example Usage
+Ask a Study Question
+"What are the main causes of World War I?"
 
-Preview production build:
+Generate a Quiz
+"Create a 5-question multiple choice quiz about World War I"
 
-npm run preview
+Work with a PDF
 
+Upload your study material (PDF)
 
-Deploy easily on Vercel, Netlify, or any static host.
+Ask:
 
- Usage
+"Summarize the key points from Chapter 2"
 
-Launch the app.
+Troubleshooting
 
-Start a chat by asking a study-related question.
+Missing GEMINI_API_KEY → Check your .env.local file
 
-Use Quiz Me or Give Assignment for structured learning.
+Port in use → Change default port in vite.config.ts
 
-Upload documents/images for direct AI assistance.
+Dependency errors → Run npm install again
 
- Contributing
+Dependencies
+Package	Purpose
+React	UI framework
+TypeScript	Type safety
+Vite	Development/build tool
+dotenv	Environment variables
+Contributing
 
-Contributions are welcome! Please fork this repo and submit a pull request with clear descriptions.
+Contributions are welcome!
+You can extend this project by:
+
+Adding new quiz types
+
+Enhancing PDF parsing
+
+Improving assignment workflows
 
 📜 License
 
